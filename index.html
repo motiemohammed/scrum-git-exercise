@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Quiz - Devine la capitale</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">🌍 Capital Quiz</div>
+        <p>Teste tes connaissances en géographie !</p>
+    </header>
+
+    <main class="container">
+
+        <section class="quiz-card">
+
+            <h1>Devine la capitale !</h1>
+            <p class="description">
+                Choisis un continent et trouve la capitale du pays proposé.
+            </p>
+
+            <form id="continentForm">
+                <label for="continent">1. Choisis un continent</label>
+
+                <select id="continent" required>
+                    <option value="">-- Sélectionner un continent --</option>
+                    <option value="Afrique">Afrique</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Asie">Asie</option>
+                    <option value="Amérique">Amérique</option>
+                    <option value="Océanie">Océanie</option>
+                </select>
+
+                <button type="submit" id="startButton">
+                    Proposer un pays
+                </button>
+            </form>
+
+            <section id="questionSection" hidden>
+
+                <div class="country-box">
+                    <p class="small-title">2. Trouve la capitale de ce pays</p>
+
+                    <div id="countryFlag" class="flag">🌍</div>
+
+                    <h2 id="countryName">Nom du pays</h2>
+
+                    <p id="countryContinent" class="continent-info"></p>
+                </div>
+
+                <form id="answerForm">
+                    <label for="capitalInput">
+                        Quelle est sa capitale ?
+                    </label>
+
+                    <input
+                        type="text"
+                        id="capitalInput"
+                        placeholder="Écris le nom de la capitale"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" id="checkButton">
+                        Vérifier ma réponse
+                    </button>
+                </form>
+
+                <div id="result" class="result" role="status"
+                     aria-live="polite" hidden></div>
+
+                <div class="score-board">
+                    <div>
+                        <span class="score-label">Score</span>
+                        <strong id="score">0</strong>
+                    </div>
+
+                    <div>
+                        <span class="score-label">Questions</span>
+                        <strong id="questions">0</strong>
+                    </div>
+
+                    <div>
+                        <span class="score-label">Réussite</span>
+                        <strong id="percentage">0 %</strong>
+                    </div>
+                </div>
+
+                <button type="button" id="nextButton" hidden>
+                    Pays suivant →
+                </button>
+
+            </section>
+
+            <button type="button" id="resetButton" class="reset-button">
+                Recommencer la partie
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Capital Quiz © 2026 — Apprendre en s'amusant</p>
+    </footer>
+
+</body>
+</html>
