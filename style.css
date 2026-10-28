@@ -1,0 +1,263 @@
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e8f0ff, #f5f7ff);
+    color: #1f2937;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* En-tête */
+.header {
+    background: #243b80;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #e0e7ff;
+}
+
+/* Contenu principal */
+.container {
+    width: 100%;
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.quiz-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(31, 41, 55, 0.10);
+}
+
+h1 {
+    color: #243b80;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.description {
+    color: #6b7280;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+/* Formulaires */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 16px;
+    background: white;
+}
+
+select:focus,
+input:focus {
+    outline: 2px solid #6485ee;
+    border-color: #6485ee;
+}
+
+/* Boutons */
+button {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    background: #3556c9;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: #243b80;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Carte du pays */
+#questionSection {
+    margin-top: 28px;
+}
+
+.country-box {
+    background: #eef2ff;
+    border: 1px solid #dbe4ff;
+    border-radius: 12px;
+    text-align: center;
+    padding: 24px 15px;
+    margin-bottom: 25px;
+}
+
+.small-title {
+    color: #4b5563;
+    margin-bottom: 18px;
+}
+
+.flag {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+#countryName {
+    color: #243b80;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.continent-info {
+    color: #6b7280;
+}
+
+/* Résultat */
+.result {
+    margin: 18px 0;
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.result.success {
+    color: #166534;
+    background: #dcfce7;
+    border: 1px solid #86efac;
+}
+
+.result.error {
+    color: #991b1b;
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+}
+
+.result.info {
+    color: #1e40af;
+    background: #dbeafe;
+}
+
+/* Tableau de score */
+.score-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.score-board div {
+    background: #f3f4f6;
+    border-radius: 10px;
+    padding: 15px 5px;
+    text-align: center;
+}
+
+.score-label {
+    display: block;
+    color: #6b7280;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.score-board strong {
+    color: #243b80;
+    font-size: 22px;
+}
+
+#nextButton {
+    background: #0f8b68;
+    margin-bottom: 15px;
+}
+
+#nextButton:hover {
+    background: #0b6b50;
+}
+
+.reset-button {
+    background: #64748b;
+    margin-top: 12px;
+}
+
+.reset-button:hover {
+    background: #475569;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* Téléphones */
+@media (max-width: 480px) {
+    .container {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .quiz-card {
+        padding: 20px 16px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    #countryName {
+        font-size: 24px;
+    }
+
+    .score-board {
+        gap: 6px;
+    }
+
+    .score-board strong {
+        font-size: 19px;
+    }
+}
