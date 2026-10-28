@@ -6,7 +6,7 @@ const paysDuMonde = {
     "Afrique": [
         { nom: "Maroc", capitale: "Rabat", drapeau: "🇲🇦" },
         { nom: "Sénégal", capitale: "Dakar", drapeau: "🇸🇳" },
-        { nom: "Congo-Brazzaville", capitale: "Brazzaville", drapeau: "🇨🇬" },
+        { nom: "Congo", capitale: "Brazzaville", drapeau: "🇨🇬" },
         { nom: "République démocratique du Congo", capitale: "Kinshasa", drapeau: "🇨🇩" },
         { nom: "Côte d'Ivoire", capitale: "Yamoussoukro", drapeau: "🇨🇮" },
         { nom: "Ghana", capitale: "Accra", drapeau: "🇬🇭" },
