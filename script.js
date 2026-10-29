@@ -92,6 +92,7 @@ const countryContinent = document.getElementById("countryContinent");
 
 const answerForm = document.getElementById("answerForm");
 const capitalInput = document.getElementById("capitalInput");
+const hintButton = document.getElementById("hintButton");
 const result = document.getElementById("result");
 
 const scoreElement = document.getElementById("score");
@@ -185,6 +186,8 @@ function proposerPays() {
     capitalInput.required = true;
 
     answerForm.querySelector("button[type='submit']").disabled = false;
+    hintButton.disabled = false;
+    hintButton.textContent = "💡 Afficher un indice";
 
     result.hidden = true;
     nextButton.hidden = true;
@@ -247,10 +250,31 @@ answerForm.addEventListener("submit", function (event) {
     // Bloquer la réponse jusqu'à la question suivante
     capitalInput.disabled = true;
     answerForm.querySelector("button[type='submit']").disabled = true;
+    hintButton.disabled = true;
 
     nextButton.hidden = false;
 });
 
+
+// Indice : afficher la première lettre et le nombre de caractères
+hintButton.addEventListener("click", function () {
+    if (paysActuel === null || reponseDonnee) {
+        return;
+    }
+
+    const capitale = paysActuel.capitale;
+    const premiereLettre = capitale.charAt(0);
+    const nombreCaracteres = capitale.length;
+
+    afficherResultat(
+        "Indice : la capitale commence par « " + premiereLettre +
+        " » et contient " + nombreCaracteres + " caractères.",
+        "info"
+    );
+
+    hintButton.disabled = true;
+    hintButton.textContent = "Indice affiché";
+});
 
 // 10. Passer au pays suivant
 nextButton.addEventListener("click", function () {

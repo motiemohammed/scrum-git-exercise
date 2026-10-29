@@ -107,6 +107,16 @@ button:hover {
     background: #243b80;
 }
 
+.hint-button {
+    background: #f59e0b;
+    color: #1f2937;
+    margin-bottom: 12px;
+}
+
+.hint-button:hover {
+    background: #d97706;
+}
+
 button:active {
     transform: scale(0.99);
 }
